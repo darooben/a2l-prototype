@@ -120,7 +120,7 @@ header {
 }
 
 .banner h1:hover {
-    opacity: 0.4;
+    opacity: 1;
 }
 
 /*Container of main body text*/
