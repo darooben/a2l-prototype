@@ -109,7 +109,7 @@ header {
 
 /*The heading that appears on first image*/
 .banner h1 {
-    color: #Ffffff;
+    color: #AEA9BA;
     font-size: 5em;
     position: absolute;
     left: 50%;
@@ -299,10 +299,20 @@ header {
     animation-delay: 5.5s;
 }
 
+/*Container for each report section question*/
 .report_first, .report_second, .report_third, .report_reference {
     background-color: #00469B;
     margin-bottom: 2em;
     padding: 2em;
+}
+
+.report_heading {
+    color: #AEA9BA;
+    border-bottom: 0.125em solid #AEA9BA;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 /*Headings of report page*/
