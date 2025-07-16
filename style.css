@@ -1,0 +1,484 @@
+/*Import for merriweather font*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Adjusts the position page appears when tag is found*/
+#main_description {
+    scroll-margin-top: 15em;
+}
+
+#interesting_facts {
+    scroll-margin-top: 15em;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", sans-serif;
+
+}
+body {
+    background-color: #191960;
+}
+
+/*The container of the navigation bar*/
+header {
+    position: sticky; 
+    top:0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 0.125em solid #7A7585;
+    background-color: #191960;
+}
+
+/* styles for the logo*/
+.stonehenge_logo {
+    padding: 1em;
+    font-weight: 500;
+    font-size: 1.3em;
+    color: #AEA9BA;
+    text-decoration: none;
+}
+
+/*Container for options in navigation bar*/
+.nav_list {
+    list-style: none;
+    gap: 2em;
+    margin-right: 2em;
+    display: flex;
+}
+
+/*Each list item in navigation bar*/
+.nav_list li {
+    position: relative;
+    padding: 1em 0em;
+}
+
+/*the hyperlinks of navigation bar*/
+.nav_list li a {
+    font-weight: 500;
+    font-size: 1.3em;
+    color: #AEA9BA;
+    text-decoration: none;
+    padding-left: 2em;
+    border-left: solid #AEA9BA 0.125em;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_list li a:hover, .stonehenge_logo:hover {
+    color: #7A7585;
+}
+
+/*Underline animation in navigation bar*/
+.nav_list li a::before {
+    content: "";
+    position: absolute;
+    width: 0em;
+    height: 0.125em;
+    left: 2em;
+    bottom: 0.5em;
+    text-align: center;
+    background-color: #AEA9BA;
+    transition: 0.3s ease;
+}
+
+.nav_list li a:hover::before {
+    width: calc(100% - 2em);
+}
+
+.banner img {
+    width: 100%;
+    height: 55em;
+    object-fit: cover;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+/*Container of the first image*/
+.banner {
+    width: 100%;
+    height: 31.25em;
+    position: relative;
+}
+
+/*The heading that appears on first image*/
+.banner h1 {
+    color: #Ffffff;
+    font-size: 5em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 3s ease
+}
+
+.banner h1:hover {
+    opacity: 0.4;
+}
+
+/*Container of main body text*/
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+    margin-top: 25em;
+}
+
+/*Text appearance for main body*/
+.description h2 {
+    color: #Ffffff;
+    opacity: 0;
+    animation: appearing 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/*Controls image appearance next to each trivia (interesting) fact*/
+.fact1_picture, .fact2_picture, .fact3_picture {
+    width: 100%;
+    height: 25em;
+    object-fit: cover;
+}
+
+.fact1_picture {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: fly_into 2s ease-out forwards;
+    animation-delay: 2s
+}
+
+.fact2_picture {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fly_into 2s ease-out forwards;
+    animation-delay: 3s;
+}
+
+.fact3_picture {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: fly_into 2s ease-out forwards;
+    animation-delay: 4s
+}
+
+/*Container for right column of text in first interesting fact*/
+.fact1_rightcol p {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fly_into ease-out forwards;
+    animation-delay: 2s;
+}
+
+/*Container for left column of text in second interesting fact*/
+.fact2_leftcol p {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fly_into 2s ease-out forwards;
+    animation-delay: 3s;
+}
+
+/*Container for right column of text in third interesting fact*/
+.fact3_rightcol p {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fly_into 2s ease-out forwards;
+    animation-delay: 4s;
+}
+
+.did_you_know {
+    display: block;
+}
+
+/*Container for the first intersting fact*/
+.fact1 {
+    color: #Ffffff;
+    background-color: #00469B;
+    display: grid;
+    grid-template-columns: 50% 40%;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 15em;
+    margin-bottom: 15em;
+}
+
+.fact1_rightcol {
+    padding-top: 10em;
+}
+
+/*Container for the second intersting fact*/
+.fact2 {
+    color: #Ffffff;
+    background-color: #00469B;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 15em;
+    margin-bottom: 15em;
+}
+
+.fact2_leftcol {
+    padding-top: 10em;
+}
+
+/*Container for the third intersting fact*/
+.fact3 {
+    color: #Ffffff;
+    background-color: #00469B;
+    display: grid;
+    grid-template-columns: 50% 40%;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 15em;
+}
+
+.fact3_rightcol {
+    padding-top: 10em;
+}
+
+/*Controls appearance of image between first fact and description*/
+.in_between1 img {
+    margin-top: 4em;
+    height: 30em;
+    width: 100%;
+    opacity: 0.6;
+}
+
+/*Controls appearance of image between second and first fact*/
+.in_between2 img {
+    margin-top: 4em;
+    height: 30em;
+    width: 100%;
+    opacity: 0.6;
+}
+
+/*Controls appearance of image between third and second fact*/
+.in_between3 img {
+    margin-top: 4em;
+    height: 30em;
+    width: 100%;
+    opacity: 0.6;
+}
+
+/*Container for text below third fact*/
+.reason_to_go {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 0.125em #7A7585;
+    padding: 5em;
+    margin-bottom: 7em;
+}
+
+/*Appearance of text for why someone should go*/
+.reason_to_go h2 {
+    color: #Ffffff;
+    opacity: 0;
+    animation: appearing 2s ease-out forwards;
+    animation-delay: 5s;
+}
+
+/*Controls appearance of The text at the very bottom of the page*/
+.fin_slogan h3 {
+    color: #7A7585;
+    text-align: center;
+    font-size: 3em;
+    padding-right: 8em;
+    margin-bottom: 5em;
+    width: 79%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter_effect 2s steps(31);
+    animation-delay: 5.5s;
+}
+
+.report_first, .report_second, .report_third, .report_reference {
+    background-color: #00469B;
+    margin-bottom: 2em;
+    padding: 2em;
+}
+
+/*Headings of report page*/
+.report_first h2, .report_second h2, .report_third h2, .report_reference h2 {
+    color: #AEA9BA;
+    border-bottom: 0.125em solid #AEA9BA;
+    margin-bottom: 1em;
+}
+
+/*Appearance of text in report page*/
+.report_first p, .report_second p, .report_third p, .report_reference a {
+    color: #Ffffff;
+}
+
+/*Appearance of reference text*/
+.report_reference li::marker{
+    color: #Ffffff;
+}
+
+/*Animmation for object to appear from a direction*/
+@keyframes fly_into {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*Animation for object to appear from invisible to visible state*/
+@keyframes appearing {
+    to {
+        opacity: 1;
+    }
+}
+
+/*Animation for object to have letters appear one at a time*/
+@keyframes typewriter_effect {
+    from { 
+        width:0 
+    }
+}
+
+/*These adjustments of 7 different sizes adjusts the navigation bar*/
+@media only screen and (max-width: 62.75em) {
+    .fin_slogan h3 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 54.625em) {
+    .fin_slogan h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 30.063em) {
+    .fin_slogan h3 {
+        font-size: 1em;
+        padding-right: 20em;
+    }
+}
+
+@media only screen and (max-width: 41.063em) {
+    .stonehenge_logo, .nav_list li a {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 31.563em) {
+    .stonehenge_logo, .nav_list li a {
+        font-size: 0.75em;
+    }
+
+    .nav_list li a::before {
+        bottom: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 27.063em) {
+    header {
+        padding: 0.25em;
+    }
+
+    .stonehenge_logo, .nav_list li a {
+        font-size: 0.54em;
+        bottom: 1.3em;
+    }
+
+    .nav_list li a::before {
+        bottom: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 21.75em) {
+    .stonehenge_logo, .nav_list li a {
+        font-size: 0.45em;
+    }
+
+    .nav_list li a::before {
+        bottom: 1.5em;
+    }
+}
+
+
+/*Restructures the interesting facts to have image and text in one column*/
+@media only screen and (max-width: 34.375em) {
+    .fact1, .fact2, .fact3 {
+        height: 50em;
+        grid-template-columns: 32.5em;
+        place-items: center;
+        grid-template-areas: "picture",
+                             "text";
+    }
+
+    .fact1_picture, .fact2_picture, .fact3_picture {
+        width: 26.25em;
+    }
+
+    .fact1_rightcol, .fact2_leftcol, .fact3_rightcol {
+        padding-top: 2em;
+        padding-right: 5em;
+        padding-left: 5em;
+        font-size: 0.75em;
+    }
+}
+
+/*Adjustment to the sizing of container to fit image and text properly*/
+@media only screen and (max-width: 32.5em) {
+    .fact1, .fact2, .fact3 {
+        height: 45em;
+        grid-template-columns: 25em;
+    }
+
+    .fact1_picture, .fact2_picture, .fact3_picture {
+        width: 23em;
+    }
+
+    .fact1_rightcol, .fact2_leftcol, .fact3_rightcol {
+        padding-right: 3em;
+        padding-left: 3em;
+    }
+
+    .banner h1 {
+        font-size: 2em;
+    }
+
+    .description, .reason_to_go {
+         padding-top: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .description h2, .reason_to_go h2 {
+        font-size: 1em;
+    }
+
+    .in_between1 img, .in_between2 img, .in_between3 img {
+        height: 20em;
+    }
+}
+
+@media only screen and (max-width: 27.063em) {
+    .fact1_picture, .fact2_picture, .fact3_picture {
+        width: 21em;
+    }
+}
+
+@media only screen and (max-width: 25em) {
+    .fact1, .fact2, .fact3 {
+        grid-template-columns: 20em;
+    }
+
+    .fact1_picture, .fact2_picture, .fact3_picture {
+        width: 17em;
+    }
+
+    .in_between1 img, .in_between2 img, .in_between3 img {
+        height: 18em;
+    }
+}
