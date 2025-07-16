@@ -109,7 +109,7 @@ header {
 
 /*The heading that appears on first image*/
 .banner h1 {
-    color: #Ffffff;
+    color: red;
     font-size: 5em;
     position: absolute;
     left: 50%;
