@@ -108,7 +108,7 @@ header {
 
 /*The heading that appears on first image*/
 .banner h1 {
-    color: #FFFFFF;
+    color: red;
     font-size: 5em;
     position: absolute;
     left: 50%;
@@ -278,7 +278,7 @@ header {
 
 /*Appearance of text for why someone should go*/
 .reason_to_go h2 {
-    color: #Ffffff;
+    color: red;
     font-size: 1.6em;
     opacity: 0;
     animation: appearing 2s ease-out forwards;
